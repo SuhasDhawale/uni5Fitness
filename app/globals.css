@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-primary:hover {
+    background-image: linear-gradient(90deg, #d10000, #d10000);
+    color: #ffffff;
+  }
+
+  .btn-secondary {
+    @apply bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-primary:hover {
+    background-image: linear-gradient(90deg, #ff6b6b, #c92a2a);
+  }
+
+  .btn-outline {
+    @apply border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl;
+  }
+
+  .gradient-primary {
+    background: #000000;
+  }
+
+  .gradient-secondary {
+    background: #0a0a0a;
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, #ffc72c 0%, #d10000 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #ffc72c 0%, #d10000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glow-yellow {
+    box-shadow: 0 0 20px rgba(255, 199, 44, 0.3);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px rgba(209, 0, 0, 0.3);
+  }
+
+  .floating-buttons {
+    position: fixed;
+    right: 12px;
+    bottom: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .floating-buttons {
+      right: 20px;
+      bottom: 40px;
+      gap: 16px;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ffc72c 0%, #d10000 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ffd65e 0%, #a80000 100%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
