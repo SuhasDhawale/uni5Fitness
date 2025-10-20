@@ -176,30 +176,7 @@ export default function G99Academy() {
               ENROLL NOW
             </Button>
 
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="btn-outline px-6 md:px-8 py-3 text-base md:text-lg">DOWNLOAD BROCHURE</Button>
-              </DialogTrigger>
-              <DialogContent className="glass-effect border text-white max-w-md">
-                <DialogHeader>
-                  <DialogTitle className="text-yellow-500 text-xl">Select Your Branch</DialogTitle>
-                </DialogHeader>
-                <div className="space-y-4 pt-4">
-                  <Button
-                    className="w-full btn-secondary text-lg py-4"
-                    onClick={() => handleDownloadBrochure("armori")}
-                  >
-                    Armori Branch Brochure
-                  </Button>
-                  <Button
-                    className="w-full btn-primary text-lg py-4"
-                    onClick={() => handleDownloadBrochure("brahmapuri")}
-                  >
-                    Brahmapuri Branch Brochure
-                  </Button>
-                </div>
-              </DialogContent>
-            </Dialog>
+            
           </div>
         </div>
       </div>

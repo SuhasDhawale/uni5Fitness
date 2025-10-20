@@ -5,13 +5,14 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export default function Branches() {
-  const handleGetDirections = (lat: number, lng: number, address: string) => {
-    // Open Google Maps with specific coordinates
+  const handleGetDirections = (lat: number, lng: number) => {
+    // ✅ Opens Google Maps directions correctly
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`, "_blank")
   }
 
   const handleBookVisit = (branchName: string, whatsapp: string) => {
     const message = `Hi! I would like to book a visit to ${branchName}. Please let me know the available time slots.`
+    // ✅ WhatsApp link fix (no +91, encoded message)
     window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`, "_blank")
   }
 
@@ -19,10 +20,12 @@ export default function Branches() {
     {
       name: "ARMORI BRANCH",
       established: "2022",
-      address: "Behind Chandu Kirana Store, 1st floor Above Bank of India, Armori MH - 441208",
+      address:
+        "Behind Chandu Kirana Store, 1st Floor, Above Bank of India, Armori, Maharashtra 441208",
       phone: "+91 7020747820",
       whatsapp: "917020747820",
-      coordinates: { lat: 20.7, lng: 79.8 }, // Replace with actual coordinates
+      // ✅ Correct Google Maps coordinates (Armori)
+      coordinates: { lat: 20.7805256, lng: 79.8722211 },
       features: [
         "Modern Equipment",
         "Personal Training",
@@ -31,40 +34,51 @@ export default function Branches() {
         "Ladies Zumba Classes",
         "Online PT Services",
       ],
-      image: "/armori-branch-gym.jpg",
+      image: "/armori1.jpg",
     },
     {
       name: "BRAHMAPURI BRANCH",
       established: "2021",
-      address: "Shantanu Building Ground floor, Tilak Nagar, Wadsa Road Brahmapuri MH- 441206",
+      address:
+        "Shantanu Building, Ground Floor, Tilak Nagar, Wadsa Road, Brahmapuri, Maharashtra 441206",
       phone: "+91 9403235684",
       whatsapp: "919403235684",
-      coordinates: { lat: 20.6, lng: 79.9 }, // Replace with actual coordinates
+      // ✅ Correct Google Maps coordinates (Brahmapuri)
+      coordinates: { lat: 20.6173044, lng: 79.8457991 },
       features: [
-        "State-of-art Facility",
+        "State-of-the-art Facility",
         "Certified Trainers",
         "Flexible Timings",
         "Diet Consultation",
         "Ladies Zumba Classes",
         "Online PT Services",
       ],
-      image: "/brahmapuri-branch-gym.jpg",
+      image: "/brahmapuri5.jpg",
     },
   ]
 
   return (
     <section id="branches" className="py-12 md:py-20 gradient-secondary relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
+        {/* Section Title */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-red mb-4 md:mb-6">OUR BRANCHES</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-red mb-4 md:mb-6">
+            OUR BRANCHES
+          </h2>
           <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto">
-            Visit our state-of-the-art fitness facilities designed to provide you with the best workout experience.
+            Visit our state-of-the-art fitness facilities designed to provide you with the best
+            workout experience.
           </p>
         </div>
 
+        {/* Branch Cards */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
           {branches.map((branch, index) => (
-            <div key={index} className="glass-effect rounded-lg overflow-hidden border card-hover glow-yellow">
+            <div
+              key={index}
+              className="glass-effect rounded-lg overflow-hidden border card-hover glow-yellow"
+            >
+              {/* Image */}
               <div className="relative h-56 md:h-64">
                 <Image
                   src={branch.image || "/placeholder.svg"}
@@ -81,9 +95,11 @@ export default function Branches() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
 
+              {/* Content */}
               <div className="p-6 md:p-8">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4">{branch.name}</h3>
 
+                {/* Info Section */}
                 <div className="space-y-3 md:space-y-4 mb-6">
                   <div className="flex items-start space-x-3">
                     <MapPin className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
@@ -98,12 +114,25 @@ export default function Branches() {
                       {branch.phone}
                     </a>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Clock className="w-5 h-5 text-yellow-500" />
-                    <p className="text-gray-300 text-sm md:text-base">Mon-Sun: 5:30 AM - 10:30 PM</p>
+
+                  {/* ✅ Updated Timings Section */}
+                  <div className="flex items-start space-x-3">
+                    <Clock className="w-5 h-5 text-yellow-500 mt-1" />
+                    <div className="flex flex-col">
+                      <p className="text-gray-300 text-sm md:text-base font-medium">
+                        Mon - Sat
+                      </p>
+                      <p className="text-gray-400 text-xs md:text-sm">
+                        Morning: 5:30 AM – 10:30 AM
+                      </p>
+                      <p className="text-gray-400 text-xs md:text-sm">
+                        Evening: 5:30 PM – 10:30 PM
+                      </p>
+                    </div>
                   </div>
                 </div>
 
+                {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Features:</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -116,15 +145,21 @@ export default function Branches() {
                   </div>
                 </div>
 
+                {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button
-                    onClick={() => handleGetDirections(branch.coordinates.lat, branch.coordinates.lng, branch.address)}
+                    onClick={() =>
+                      handleGetDirections(branch.coordinates.lat, branch.coordinates.lng)
+                    }
                     className="flex-1 btn-primary"
                   >
                     <Navigation className="w-4 h-4 mr-2" />
                     GET DIRECTIONS
                   </Button>
-                  <Button onClick={() => handleBookVisit(branch.name, branch.whatsapp)} className="flex-1 btn-outline">
+                  <Button
+                    onClick={() => handleBookVisit(branch.name, branch.whatsapp)}
+                    className="flex-1 btn-outline"
+                  >
                     BOOK VISIT
                   </Button>
                 </div>
