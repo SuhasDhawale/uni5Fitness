@@ -5,14 +5,13 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export default function Branches() {
-  const handleGetDirections = (lat: number, lng: number) => {
-    // ✅ Opens Google Maps directions correctly
-    window.open(`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`, "_blank")
+  const handleGetDirections = (mapLink: string) => {
+    // ✅ Opens the actual Google Maps link directly
+    window.open(mapLink, "_blank")
   }
 
   const handleBookVisit = (branchName: string, whatsapp: string) => {
     const message = `Hi! I would like to book a visit to ${branchName}. Please let me know the available time slots.`
-    // ✅ WhatsApp link fix (no +91, encoded message)
     window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`, "_blank")
   }
 
@@ -24,8 +23,11 @@ export default function Branches() {
         "Behind Chandu Kirana Store, 1st Floor, Above Bank of India, Armori, Maharashtra 441208",
       phone: "+91 7020747820",
       whatsapp: "917020747820",
-      // ✅ Correct Google Maps coordinates (Armori)
-      coordinates: { lat: 20.7805256, lng: 79.8722211 },
+      mapLink: "https://maps.app.goo.gl/GYwQ5pkGMSWDdQJq9?g_st=ic", // ✅ Correct direct map link
+      timings: {
+        morning: "5:30 AM – 10:30 AM",
+        evening: "5:00 PM – 9:30 PM",
+      },
       features: [
         "Modern Equipment",
         "Personal Training",
@@ -43,12 +45,15 @@ export default function Branches() {
         "Shantanu Building, Ground Floor, Tilak Nagar, Wadsa Road, Brahmapuri, Maharashtra 441206",
       phone: "+91 9403235684",
       whatsapp: "919403235684",
-      // ✅ Correct Google Maps coordinates (Brahmapuri)
-      coordinates: { lat: 20.6173044, lng: 79.8457991 },
+      mapLink: "https://maps.app.goo.gl/D4gbktEAwzRkUe9C8?g_st=ic", // ✅ Correct direct map link
+      timings: {
+        morning: "5:30 AM – 11:00 AM",
+        evening: "5:00 PM – 9:30 PM",
+      },
       features: [
-        "State-of-the-art Facility",
+        "Modern Equipment",
         "Certified Trainers",
-        "Flexible Timings",
+        "Group Classes",
         "Diet Consultation",
         "Ladies Zumba Classes",
         "Online PT Services",
@@ -105,6 +110,7 @@ export default function Branches() {
                     <MapPin className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
                     <p className="text-gray-300 text-sm md:text-base">{branch.address}</p>
                   </div>
+
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-red-600" />
                     <a
@@ -115,18 +121,16 @@ export default function Branches() {
                     </a>
                   </div>
 
-                  {/* ✅ Updated Timings Section */}
+                  {/* ✅ Updated Timings Section (branch-specific) */}
                   <div className="flex items-start space-x-3">
                     <Clock className="w-5 h-5 text-yellow-500 mt-1" />
                     <div className="flex flex-col">
-                      <p className="text-gray-300 text-sm md:text-base font-medium">
-                        Mon - Sat
+                      <p className="text-gray-300 text-sm md:text-base font-medium">Mon - Sat</p>
+                      <p className="text-gray-400 text-xs md:text-sm">
+                        Morning: {branch.timings.morning}
                       </p>
                       <p className="text-gray-400 text-xs md:text-sm">
-                        Morning: 5:30 AM – 10:30 AM
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm">
-                        Evening: 5:30 PM – 10:30 PM
+                        Evening: {branch.timings.evening}
                       </p>
                     </div>
                   </div>
@@ -148,9 +152,7 @@ export default function Branches() {
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button
-                    onClick={() =>
-                      handleGetDirections(branch.coordinates.lat, branch.coordinates.lng)
-                    }
+                    onClick={() => handleGetDirections(branch.mapLink)}
                     className="flex-1 btn-primary"
                   >
                     <Navigation className="w-4 h-4 mr-2" />
