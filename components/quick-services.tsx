@@ -18,7 +18,7 @@ export default function QuickServices() {
       icon: Star,
       title: "TESTIMONIALS",
       description:
-        "Hear success stories from our 800+ satisfied members who transformed their lives with our programs.",
+        "Hear success stories from our 1600+ satisfied members who transformed their lives with our programs.",
       buttonText: "READ REVIEWS",
       color: "red",
       scrollTo: "testimonials",
