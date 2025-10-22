@@ -23,22 +23,22 @@ export default function G99Academy() {
       features: ["Sports Nutrition", "Meal Planning", "Supplement Science", "Diet Counseling"],
     },
     {
-      title: "Strength & Conditioning",
+      title: "Special Population Training",
       duration: "4 Months",
-      description: "Specialized program for athletic performance and strength training methodologies.",
-      features: ["Olympic Lifting", "Powerlifting", "Athletic Performance", "Injury Prevention"],
+      description: "Tailored program designed for individuals with specific health conditions or unique fitness needs.",
+      features: ["Senior Fitness", "Pre & Post-Natal Training", "Obesity Management", "Medical Condition Support"],
     },
   ]
 
   const stats = [
-    { icon: Users, number: "500+", label: "Certified Trainers" },
-    { icon: Trophy, number: "7", label: "Years Experience" },
+    { icon: Users, number: "2500+", label: "Certified Trainers" },
+    { icon: Trophy, number: "15+", label: "Years Experience" },
     { icon: Award, number: "95%", label: "Success Rate" },
-    { icon: Target, number: "50+", label: "Placement Partners" },
+    { icon: Target, number: "60+", label: "Placement Partners" },
   ]
 
   const handleEnrollNow = () => {
-    window.open("https://wa.me/919403235684?text=I'm%20interested%20in%20enrolling%20in%20G99%20Academy", "_blank")
+    window.open("https://wa.me/917020747820?text=I'm%20interested%20in%20enrolling%20in%20G99%20Academy", "_blank")
   }
 
   
