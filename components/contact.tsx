@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { MapPin, Phone, Mail, Send, Dumbbell, Target, CheckCircle, AlertCircle } from "lucide-react"
+import { MapPin, Phone, Mail, Send, Dumbbell, Target, CheckCircle, AlertCircle, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -111,8 +111,8 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
-  const handleGetDirections = (lat: number, lng: number) => {
-    window.open(`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`, "_blank")
+  const handleGetDirections = (mapLink: string) => {
+    window.open(mapLink, "_blank")
   }
 
   const branches = [
@@ -123,7 +123,7 @@ export default function Contact() {
       phoneLink: "tel:+917020747820",
       email: "uni5fitnessclubarmori@gmail.com",
       emailLink: "mailto:uni5fitnessclubarmori@gmail.com",
-      coordinates: { lat: 20.7, lng: 79.8 },
+      mapLink: "https://maps.app.goo.gl/GYwQ5pkGMSWDdQJq9?g_st=ic",
     },
     {
       name: "Brahmapuri Branch",
@@ -132,7 +132,7 @@ export default function Contact() {
       phoneLink: "tel:+919403235684",
       email: "Uni5fitnessclub@gmail.com",
       emailLink: "mailto:Uni5fitnessclub@gmail.com",
-      coordinates: { lat: 20.6, lng: 79.9 },
+      mapLink: "https://maps.app.goo.gl/D4gbktEAwzRkUe9C8?g_st=ic",
     },
   ]
 
@@ -329,7 +329,7 @@ export default function Contact() {
                 </div>
                 <Button
                   className="w-full mt-4 btn-outline"
-                  onClick={() => handleGetDirections(branch.coordinates.lat, branch.coordinates.lng)}
+                  onClick={() => handleGetDirections(branch.mapLink)}
                 >
                   GET DIRECTIONS
                 </Button>
@@ -341,7 +341,7 @@ export default function Contact() {
               <h4 className="text-lg md:text-xl font-bold text-white mb-4">Quick Contact</h4>
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/919403235684"
+                  href="https://wa.me/917020747820"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 text-gray-300 hover:text-green-500 transition-colors"
@@ -350,7 +350,7 @@ export default function Contact() {
                   <span className="text-sm md:text-base">WhatsApp Us</span>
                 </a>
                 <a
-                  href="tel:+919403235684"
+                  href="tel:+917020747820"
                   className="flex items-center space-x-3 text-gray-300 hover:text-yellow-500 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
@@ -364,5 +364,3 @@ export default function Contact() {
     </section>
   )
 }
-
-import { MessageCircle } from "lucide-react"
