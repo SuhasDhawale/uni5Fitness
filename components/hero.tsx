@@ -26,12 +26,12 @@ export default function Hero() {
   }
 
   const handleCallNow = () => {
-    window.open("tel:+919545799225", "_self")
+    window.open("tel:+917020747820", "_self")
   }
 
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/919545799225?text=Hi!%20I%20want%20to%20know%20more%20about%20UNi5%20Fitness%20Club%20membership",
+      "https://wa.me/917020747820?text=Hi!%20I%20want%20to%20know%20more%20about%20UNi5%20Fitness%20Club%20membership",
       "_blank",
     )
   }
@@ -222,7 +222,7 @@ export default function Hero() {
 
               {/* Floating Stats - Mobile Optimized */}
               <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 glass-effect text-white p-3 sm:p-4 md:p-5 rounded-lg animate-float glow-yellow z-20">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-500">+1300</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-500">2000+</div>
                 <div className="text-xs sm:text-sm md:text-base">Happy Members</div>
               </div>
 
@@ -230,7 +230,7 @@ export default function Hero() {
                 className="absolute top-1/4 -left-2 sm:-left-4 glass-effect text-white p-3 sm:p-4 md:p-5 rounded-lg animate-float glow-red z-20"
                 style={{ animationDelay: "1s" }}
               >
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-red-600">+15</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-red-600">4+</div>
                 <div className="text-xs sm:text-sm md:text-base">Expert Trainers</div>
               </div>
 
@@ -238,7 +238,7 @@ export default function Hero() {
                 className="absolute bottom-1/4 -right-2 sm:-right-4 glass-effect text-white p-3 sm:p-4 md:p-5 rounded-lg animate-float glow-yellow z-20"
                 style={{ animationDelay: "2s" }}
               >
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-500">5+</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-500">12+</div>
                 <div className="text-xs sm:text-sm md:text-base">Years Experience</div>
               </div>
 
@@ -262,11 +262,11 @@ export default function Hero() {
         <div className="text-gray-400 text-xs sm:text-sm md:text-base">Client Satisfaction</div>
       </div>
       <div className="text-center p-4 glass-effect rounded-lg">
-        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-500 mb-2">5+</div>
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-500 mb-2">12+</div>
         <div className="text-gray-400 text-xs sm:text-sm md:text-base">Years Experience</div>
       </div>
       <div className="text-center p-4 glass-effect rounded-lg">
-        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-2">800+</div>
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-2">1300+</div>
         <div className="text-gray-400 text-xs sm:text-sm md:text-base">Active Members</div>
       </div>
 

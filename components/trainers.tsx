@@ -11,8 +11,8 @@ export default function Trainers() {
 
   const trainers = [
     {
-      name: "Rahul Sharma",
-      branch: "brahmapuri",
+      name: "Swapnil Raut",
+      branch: "armori",
       specialization: "Strength Training & Powerlifting",
       mode: "Online/Offline",
       experience: "5 Years",

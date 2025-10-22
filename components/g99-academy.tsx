@@ -41,19 +41,7 @@ export default function G99Academy() {
     window.open("https://wa.me/919403235684?text=I'm%20interested%20in%20enrolling%20in%20G99%20Academy", "_blank")
   }
 
-  const handleDownloadBrochure = (branch: "armori" | "brahmapuri") => {
-    // In production, replace with actual PDF URLs
-    const brochureUrls = {
-      armori: "/brochures/G99_Academy_Armori_Brochure.pdf",
-      brahmapuri: "/brochures/G99_Academy_Brahmapuri_Brochure.pdf",
-    }
-
-    // For now, show alert. In production, this will download the PDF
-    alert(
-      `Downloading ${branch === "armori" ? "Armori" : "Brahmapuri"} branch brochure. Please contact us for the latest brochure.`,
-    )
-    // window.open(brochureUrls[branch], '_blank')
-  }
+  
 
   return (
     <section id="academy" className="py-12 md:py-20 gradient-primary relative overflow-hidden">
