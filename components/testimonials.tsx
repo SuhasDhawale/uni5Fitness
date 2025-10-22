@@ -63,7 +63,7 @@ export default function Testimonials() {
             WHAT OUR <span className="text-red-600">MEMBERS SAY</span>
           </h2>
           <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto">
-            Real transformations, real stories. Hear from our 800+ satisfied members who achieved their fitness goals
+            Real transformations, real stories. Hear from our 1600+ satisfied members who achieved their fitness goals
             with UNi5 Fitness Club.
           </p>
         </div>
@@ -109,10 +109,10 @@ export default function Testimonials() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-400 text-base md:text-lg mb-4">Join our community of 800+ satisfied members today!</p>
+          <p className="text-gray-400 text-base md:text-lg mb-4">Join our community of 1600+ satisfied members today!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919403235684?text=I%20want%20to%20start%20my%20fitness%20journey"
+              href="https://wa.me/917020747820?text=I%20want%20to%20start%20my%20fitness%20journey"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center justify-center px-8 py-3 text-base md:text-lg"

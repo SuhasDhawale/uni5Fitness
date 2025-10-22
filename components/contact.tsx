@@ -42,7 +42,7 @@ export default function Contact() {
         const whatsappNumbers = {
           armori: "917020747820",
           brahmapuri: "919403235684",
-          both: "919403235684",
+          both: "917020747820",
         }
 
         const whatsappNumber = whatsappNumbers[formData.branch as keyof typeof whatsappNumbers] || "919403235684"
@@ -85,7 +85,7 @@ export default function Contact() {
       const whatsappNumbers = {
         armori: "917020747820",
         brahmapuri: "919403235684",
-        both: "919403235684",
+        both: "917020747820",
       }
 
       const whatsappNumber = whatsappNumbers[formData.branch as keyof typeof whatsappNumbers] || "919403235684"
@@ -121,8 +121,8 @@ export default function Contact() {
       address: "Behind Chandu Kirana Store, 1st floor Above Bank of India, Armori MH - 441208",
       phone: "+91 7020747820",
       phoneLink: "tel:+917020747820",
-      email: "armori@uni5fitness.com",
-      emailLink: "mailto:armori@uni5fitness.com",
+      email: "uni5fitnessclubarmori@gmail.com",
+      emailLink: "mailto:uni5fitnessclubarmori@gmail.com",
       coordinates: { lat: 20.7, lng: 79.8 },
     },
     {
@@ -130,8 +130,8 @@ export default function Contact() {
       address: "Shantanu Building Ground floor, Tilak Nagar, Wadsa Road Brahmapuri MH- 441206",
       phone: "+91 9403235684",
       phoneLink: "tel:+919403235684",
-      email: "brahmapuri@uni5fitness.com",
-      emailLink: "mailto:brahmapuri@uni5fitness.com",
+      email: "Uni5fitnessclub@gmail.com",
+      emailLink: "mailto:Uni5fitnessclub@gmail.com",
       coordinates: { lat: 20.6, lng: 79.9 },
     },
   ]
