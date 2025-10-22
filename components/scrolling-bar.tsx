@@ -5,7 +5,7 @@ import { Gift, Clock, Users, Award } from "lucide-react"
 export default function ScrollingBar() {
   const offers = [
     { icon: Gift, text: "FREE NUTRITION CONSULTATION FOR QUICK JOINERS" },
-    { icon: Clock, text: "MORNING: 5:30 AM - 10:30 AM / EVENING: 5:30 PM - 10:30 PM" },
+    { icon: Clock, text: "MORNING: 5:30 AM - 10:30 AM / EVENING: 5:30 PM - 9:30 PM" },
     { icon: Users, text: "PERSONAL TRAINING SESSIONS" },
     { icon: Award, text: "CERTIFIED PROFESSIONAL TRAINERS" },
     { icon: Gift, text: "FREE DIET PLAN WITH MEMBERSHIP" },
