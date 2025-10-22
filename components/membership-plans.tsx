@@ -39,9 +39,10 @@ export default function MembershipPlans() {
       features: [
         "Gym Access",
         "Basic Equipment",
-        "Locker Facility",
+        "Free Diet Consultation – 1st Month!",
         "General Guidance",
-        "Ladies Zumba Classes (Morning: 5:30-7:30 AM, Evening: 5:00-6:30 PM)",
+        "Supplement Guidance",
+        
       ],
       // Basic exists only for Armori per your instructions (no brahmapuri basic)
       prices: {
@@ -58,12 +59,13 @@ export default function MembershipPlans() {
       popular: true,
       features: [
         "All Basic Features",
-        "Personal Training (2 sessions/month)",
-        "Diet Consultation",
+        "Gym Access",
+        "Basic Equipment",
+        "Free Diet Consultation – 1st Month!",
+        "General Guidance",
+        "Supplement Guidance",
+        "Cardio Access Included",
         "Group Classes",
-        "Nutrition Guidance",
-        "Progress Tracking",
-        "Online Personal Training",
         "Ladies Zumba Classes (Morning: 5:30-7:30 AM, Evening: 5:00-6:30 PM)",
       ],
       // Premium: exact values you gave
@@ -80,14 +82,18 @@ export default function MembershipPlans() {
       color: "red",
       features: [
         "All Premium Features",
-        "Unlimited Personal Training",
+        "Gym Access",
+        "Basic Equipment",
+        "Free Diet Consultation – 1st Month!",
+        "General Guidance",
+        "Supplement Guidance",
+        "Cardio Access Included",
+        "Group Classes",
+        "Personal Training",
         "Custom Diet Plans",
         "24/7 Support",
-        "Supplement Guidance",
         "Priority Support",
-        "Guest Passes (2/month)",
         "Online Personal Training",
-        "Ladies Zumba Classes (Morning: 5:30-7:30 AM, Evening: 5:00-6:30 PM)",
       ],
       // Armori elite exact values (you provided)
       prices: {
