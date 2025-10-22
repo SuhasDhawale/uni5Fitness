@@ -32,7 +32,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Facebook, href: "https://facebook.com/uni5fitness", color: "hover:text-blue-500" },
-    { icon: Instagram, href: "https://instagram.com/uni5fitness", color: "hover:text-pink-500" },
+    { icon: Instagram, href: "https://www.instagram.com/uni5fitnessclubarmori?igsh=ZHVpMjUwYW0waHN4", color: "hover:text-pink-500" },
     { icon: Twitter, href: "https://twitter.com/uni5fitness", color: "hover:text-blue-400" },
     { icon: Youtube, href: "https://youtube.com/@uni5fitness", color: "hover:text-red-500" },
   ]
@@ -107,15 +107,15 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 md:w-5 md:h-5 text-yellow-500 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-400 text-xs md:text-sm">Brahmapuri Branch:</p>
-                  <p className="text-gray-300 text-xs md:text-sm">Tilak Nagar, Wadsa Road</p>
+                  <p className="text-gray-400 text-xs md:text-sm">Armori Branch:</p>
+                  <p className="text-gray-300 text-xs md:text-sm">Above Bank of India</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 md:w-5 md:h-5 text-red-600 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-400 text-xs md:text-sm">Armori Branch:</p>
-                  <p className="text-gray-300 text-xs md:text-sm">Above Bank of India</p>
+                  <p className="text-gray-400 text-xs md:text-sm">Brahmapuri Branch:</p>
+                  <p className="text-gray-300 text-xs md:text-sm">Tilak Nagar, Wadsa Road</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -124,7 +124,7 @@ export default function Footer() {
                   href="tel:+919403235684"
                   className="text-gray-300 text-xs md:text-sm hover:text-yellow-500 transition-colors"
                 >
-                  +91 9403235684 (Brahmapuri)
+                  +91 7020747820 (Armori)
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -133,7 +133,16 @@ export default function Footer() {
                   href="tel:+917020747820"
                   className="text-gray-300 text-xs md:text-sm hover:text-yellow-500 transition-colors"
                 >
-                  +91 7020747820 (Armori)
+                  +91 9403235684 (Brahmapuri)
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 md:w-5 md:h-5 text-yellow-600" />
+                <a
+                  href="mailto:info@uni5fitness.com"
+                  className="text-gray-300 text-xs md:text-sm hover:text-yellow-500 transition-colors"
+                >
+                  uni5fitnessclubarmori@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -142,7 +151,7 @@ export default function Footer() {
                   href="mailto:info@uni5fitness.com"
                   className="text-gray-300 text-xs md:text-sm hover:text-yellow-500 transition-colors"
                 >
-                  info@uni5fitness.com
+                  Uni5fitnessclub@gmail.com
                 </a>
               </div>
             </div>
