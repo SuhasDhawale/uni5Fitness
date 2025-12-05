@@ -145,7 +145,8 @@ export default function Trainers() {
             MEET OUR EXPERT <span className="text-red-600">TRAINERS</span>
           </h2>
           <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto mb-6 md:mb-8">
-            Our certified professional trainers are dedicated to helping you achieve your fitness goals with personalized training programs and expert guidance.
+            Our certified professional trainers are dedicated to helping you achieve your fitness goals with
+            personalized training programs and expert guidance.
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-12">
@@ -155,7 +156,9 @@ export default function Trainers() {
                 onClick={() => setSelectedBranch(branch.key)}
                 aria-pressed={selectedBranch === branch.key}
                 className={`px-5 md:px-6 py-3 rounded-lg font-semibold transition-all text-sm md:text-base ${
-                  selectedBranch === branch.key ? "bg-yellow-500 text-black glow-yellow shadow-lg" : "glass-effect text-white hover:bg-gray-800"
+                  selectedBranch === branch.key
+                    ? "bg-yellow-500 text-black glow-yellow shadow-lg"
+                    : "glass-effect text-white hover:bg-gray-800"
                 }`}
               >
                 {branch.label}
@@ -166,15 +169,27 @@ export default function Trainers() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filteredTrainers.map((trainer, index) => (
-            <article key={index} className="glass-effect rounded-lg overflow-hidden border border-gray-800 hover:border-yellow-500/50 transition-all duration-300 group card-hover flex flex-col">
+            <article
+              key={index}
+              className="glass-effect rounded-lg overflow-hidden border border-gray-800 hover:border-yellow-500/50 transition-all duration-300 group card-hover flex flex-col"
+            >
               <div className="relative h-56 md:h-64 w-full">
-                <Image src={trainer.image || "/placeholder.svg"} alt={trainer.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" />
+                <Image
+                  src={trainer.image || "/placeholder.svg"}
+                  alt={trainer.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
+                />
 
                 <div className="absolute top-3 right-3 glass-effect text-white px-2 py-1 rounded-full text-sm flex items-center space-x-1">
                   <Star className="w-4 h-4 text-yellow-500" />
                   <span>{trainer.rating ?? "—"}</span>
                 </div>
-                <div className="absolute top-3 left-3 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-semibold">{trainer.mode}</div>
+                <div className="absolute top-3 left-3 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  {trainer.mode}
+                </div>
               </div>
 
               <div className="p-5 md:p-6 flex flex-col flex-grow">
@@ -184,8 +199,12 @@ export default function Trainers() {
                   <span className="text-gray-300 capitalize text-sm md:text-base">{trainer.branch}</span>
                 </div>
 
-                <p className="text-yellow-500 font-semibold mb-2 text-sm md:text-base">{trainer.specialization}</p>
-                <p className="text-gray-400 text-sm mb-4">{trainer.experience} Experience • {trainer.clients} Clients</p>
+                <p className="text-yellow-500 font-semibold mb-2 text-sm md:text-base">
+                  {trainer.specialization}
+                </p>
+                <p className="text-gray-400 text-sm mb-4">
+                  {trainer.experience} Experience • {trainer.clients} Clients
+                </p>
 
                 <div className="mb-4 flex-grow">
                   <h4 className="text-white font-semibold mb-2 text-sm md:text-base">Certifications:</h4>
@@ -199,15 +218,29 @@ export default function Trainers() {
                       </div>
                     ))}
 
-                    {trainer.certifications.length > 2 && <p className="text-yellow-500 text-xs md:text-sm">+{trainer.certifications.length - 2} more</p>}
+                    {trainer.certifications.length > 2 && (
+                      <p className="text-yellow-500 text-xs md:text-sm">
+                        +{trainer.certifications.length - 2} more
+                      </p>
+                    )}
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-2 mt-auto">
-                  <Button className="w-full btn-secondary text-sm py-2.5" onClick={() => handleBookSession(trainer)}>BOOK SESSION</Button>
+                  <Button
+                    className="w-full btn-secondary text-sm py-2.5"
+                    onClick={() => handleBookSession(trainer)}
+                  >
+                    BOOK SESSION
+                  </Button>
 
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black bg-transparent transition-all text-xs md:text-sm py-2" onClick={() => openCertificatesModal(trainer)}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black bg-transparent transition-all text-xs md:text-sm py-2"
+                      onClick={() => openCertificatesModal(trainer)}
+                    >
                       <Eye className="w-4 h-4 mr-2" />
                       View Certificates
                     </Button>
@@ -220,15 +253,37 @@ export default function Trainers() {
       </div>
 
       {/* modal that first shows list, and then viewer inside same modal */}
-      <Dialog open={isModalOpen} onOpenChange={(val) => { if (!val) closeModal(); else setIsModalOpen(val); }}>
+      <Dialog
+        open={isModalOpen}
+        onOpenChange={(val) => {
+          if (!val) closeModal()
+          else setIsModalOpen(val)
+        }}
+      >
         <DialogContent className="glass-effect border text-white max-w-4xl w-[96%] sm:w-[86%] md:w-[75%] lg:w-[64%] p-0 max-h-[90vh] overflow-hidden">
           <DialogHeader className="px-4 py-3 border-b border-gray-800 flex items-center justify-between">
-            <DialogTitle className="text-yellow-500 text-lg md:text-xl">{modalView === "list" ? `${activeTrainer?.name} - Certifications` : activeCert?.title}</DialogTitle>
+            <DialogTitle className="text-yellow-500 text-lg md:text-xl">
+              {modalView === "list"
+                ? `${activeTrainer?.name} - Certifications`
+                : activeCert?.title}
+            </DialogTitle>
             <div className="flex items-center gap-2">
               {modalView === "viewer" && activeCert && (
-                <Button size="sm" className="text-xs md:text-sm" onClick={() => openCertInNewTab(activeCert.pdfUrl)}>Open in new tab</Button>
+                <Button
+                  size="sm"
+                  className="text-xs md:text-sm"
+                  onClick={() => openCertInNewTab(activeCert.pdfUrl)}
+                >
+                  Open in new tab
+                </Button>
               )}
-              <Button size="sm" variant={undefined} className="p-2" onClick={() => closeModal()} aria-label="Close">
+              <Button
+                size="sm"
+                variant={undefined}
+                className="p-2"
+                onClick={() => closeModal()}
+                aria-label="Close"
+              >
                 <X className="w-4 h-4" />
               </Button>
             </div>
@@ -239,27 +294,46 @@ export default function Trainers() {
             {modalView === "list" && (
               <div className="p-4 space-y-3 overflow-y-auto max-h-[70vh]">
                 {activeTrainer?.certifications.map((cert) => (
-                  <div key={cert.id} className="bg-black/50 p-3 rounded-lg border border-gray-800 flex items-center justify-between">
+                  <div
+                    key={cert.id}
+                    className="bg-black/50 p-3 rounded-lg border border-gray-800 flex items-center justify-between"
+                  >
                     <div className="flex items-start space-x-3">
                       <Award className="w-5 h-5 text-yellow-500" />
                       <div>
                         <h4 className="font-semibold text-sm md:text-base">{cert.title}</h4>
-                        <p className="text-xs text-gray-400">{cert.issuer ?? "Certified Professional"} • {cert.year ?? "—"}</p>
+                        <p className="text-xs text-gray-400">
+                          {cert.issuer ?? "Certified Professional"} •{" "}
+                          {cert.year ?? "—"}
+                        </p>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <Button size="sm" className="btn-secondary text-xs md:text-sm" onClick={() => openCertInModalViewer(cert)}>
-                        <FileText className="w-3 h-3 md:w-4 md:h-4 mr-1" />View
+                      <Button
+                        size="sm"
+                        className="btn-secondary text-xs md:text-sm"
+                        onClick={() => openCertInModalViewer(cert)}
+                      >
+                        <FileText className="w-3 h-3 md:w-4 md:h-4 mr-1" />
+                        View
                       </Button>
-                      <Button size="sm" variant={undefined} className="text-xs md:text-sm" onClick={() => openCertInNewTab(cert.pdfUrl)}>
-                        <ExternalLink className="w-3 h-3 md:w-4 md:h-4 mr-1" />New Tab
+                      <Button
+                        size="sm"
+                        variant={undefined}
+                        className="text-xs md:text-sm"
+                        onClick={() => openCertInNewTab(cert.pdfUrl)}
+                      >
+                        <ExternalLink className="w-3 h-3 md:w-4 md:h-4 mr-1" />
+                        New Tab
                       </Button>
                     </div>
                   </div>
                 ))}
 
-                {(!activeTrainer || activeTrainer.certifications.length === 0) && <div className="text-gray-400">No certificates available.</div>}
+                {(!activeTrainer || activeTrainer.certifications.length === 0) && (
+                  <div className="text-gray-400">No certificates available.</div>
+                )}
               </div>
             )}
 
@@ -269,14 +343,33 @@ export default function Trainers() {
                   <div className="flex items-center gap-3">
                     <FileText className="w-5 h-5 text-yellow-400" />
                     <div>
-                      <h4 className="font-semibold text-sm md:text-base">{activeCert.title}</h4>
-                      <p className="text-xs text-gray-400">{activeCert.issuer ?? "Certified Professional"} • {activeCert.year ?? "—"}</p>
+                      <h4 className="font-semibold text-sm md:text-base">
+                        {activeCert.title}
+                      </h4>
+                      <p className="text-xs text-gray-400">
+                        {activeCert.issuer ?? "Certified Professional"} •{" "}
+                        {activeCert.year ?? "—"}
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <Button size="sm" className="text-xs md:text-sm" onClick={() => openCertInNewTab(activeCert.pdfUrl)}>Open in new tab</Button>
-                    <Button size="sm" variant={undefined} className="text-xs md:text-sm" onClick={() => { setModalView("list"); setActiveCert(null); }}>
+                    <Button
+                      size="sm"
+                      className="text-xs md:text-sm"
+                      onClick={() => openCertInNewTab(activeCert.pdfUrl)}
+                    >
+                      Open in new tab
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant={undefined}
+                      className="text-xs md:text-sm"
+                      onClick={() => {
+                        setModalView("list")
+                        setActiveCert(null)
+                      }}
+                    >
                       Back
                     </Button>
                   </div>
@@ -284,18 +377,23 @@ export default function Trainers() {
 
                 <div className="flex-1 bg-gray-900 overflow-hidden">
                   {/* iframe viewer optimized for responsiveness */}
-                  <iframe src={activeCert.pdfUrl} title={activeCert.title} className="w-full h-full border-0" />
+                  <iframe
+                    src={activeCert.pdfUrl}
+                    title={activeCert.title}
+                    className="w-full h-full border-0"
+                  />
                 </div>
               </div>
             )}
           </div>
 
           <DialogFooter className="px-4 py-3 border-t border-gray-800">
-            <p className="text-xs text-gray-400">Tip: Use "View" to preview inside this small modal. "Open in new tab" will open the PDF in a separate tab for downloading or printing.</p>
+            <p className="text-xs text-gray-400">
+              Tip: Use the View option to preview inside this small modal. Open in new tab will open the PDF in a separate tab for downloading or printing.
+            </p>
           </DialogFooter>
         </DialogContent>
       </Dialog>
     </section>
   )
-  
 }

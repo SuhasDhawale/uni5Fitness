@@ -90,7 +90,7 @@ export default function OurStory() {
             <div className="glass-effect p-6 md:p-8 rounded-lg border border-gray-800 card-hover">
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gray-800">
                 <Image
-                  src="/images/founder1.jpg"
+                  src="/images/cartoon-bodybuilder-3d.jpg"
                   alt="Swapnil Raut"
                   width={96}
                   height={96}
@@ -108,7 +108,7 @@ export default function OurStory() {
             <div className="glass-effect p-6 md:p-8 rounded-lg border border-gray-800 card-hover">
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gray-800">
                 <Image
-                  src="/images/founder2.jpg"
+                  src="/images/cartoon-bodybuilder-3d.jpg"
                   alt="Ankit Dhanorkar"
                   width={96}
                   height={96}

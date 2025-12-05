@@ -166,7 +166,7 @@ export default function Contact() {
                 <div>
                   <p className="text-green-500 font-semibold">Message sent successfully!</p>
                   <p className="text-green-400 text-sm mt-1">
-                    We've received your inquiry and will get back to you within 24 hours.
+                    We have received your inquiry and will get back to you within 24 hours.
                   </p>
                 </div>
               </div>
@@ -178,7 +178,7 @@ export default function Contact() {
                 <div>
                   <p className="text-red-500 font-semibold">Oops! Something went wrong.</p>
                   <p className="text-red-400 text-sm mt-1">
-                    We've opened WhatsApp for you as a backup. You can also call us directly.
+                    We have opened WhatsApp for you as a backup. You can also call us directly.
                   </p>
                 </div>
               </div>
@@ -327,10 +327,7 @@ export default function Contact() {
                     </a>
                   </div>
                 </div>
-                <Button
-                  className="w-full mt-4 btn-outline"
-                  onClick={() => handleGetDirections(branch.mapLink)}
-                >
+                <Button className="w-full mt-4 btn-outline" onClick={() => handleGetDirections(branch.mapLink)}>
                   GET DIRECTIONS
                 </Button>
               </div>
